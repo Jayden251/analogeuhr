@@ -16,7 +16,7 @@ function addClockNumbers() {
     { number: 10, angle: 300 },
     { number: 11, angle: 330 },
   ];
-
+ 
   numbers.forEach(({ number, angle }) => {
     const numberElement = document.createElement('div');
     numberElement.classList.add('clock-number');
