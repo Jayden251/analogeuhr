@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+.clock {
+  width: 80vmin;
+  height: 80vmin;
+  border: 1vmin solid #333;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 2vmin rgba(0, 0, 0, 0.2);
+}
+
+.outer-clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.inner-clock-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.clock-number {
+  position: absolute;
+  text-align: center;
+  color: #333;
+  font-size: 2.5vmin;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 1vmin;
+  background-color: #333;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.hour-hand {
+  width: 15vmin;
+  /* Length of the hour hand */
+  height: 1.6vmin;
+  /* Thickness of the hour hand */
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  /* Center the hand vertically */
+  left: 50%;
+  /* Center the hand horizontally */
+  transform-origin: 0% 50%;
+  /* Start from the center of the clock */
+  transform: rotate(90deg);
+  /* Initial rotation */
+}
+
+.min-hand {
+  width: 22vmin;
+  /* Length of the minute hand */
+  height: 1.2vmin;
+  /* Thickness of the minute hand */
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  /* Center the hand vertically */
+  left: 50%;
+  /* Center the hand horizontally */
+  transform-origin: 0% 50%;
+  /* Start from the center of the clock */
+  transform: rotate(90deg);
+  /* Initial rotation */
+}
+
+.second-hand {
+  width: 28vmin;
+  /* Length of the second hand */
+  height: 0.8vmin;
+  /* Thickness of the second hand */
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  /* Center the hand vertically */
+  left: 50%;
+  /* Center the hand horizontally */
+  transform-origin: 0% 50%;
+  /* Start from the center of the clock */
+  transform: rotate(90deg);
+  /* Initial rotation */
+}
+
+
+body {
+  background-color: ghostwhite;
+}
