@@ -24,30 +24,11 @@ body {
   height: 100%;
 }
 
-.inner-clock-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50%);
-  top: 50%;
-}
-
-.clock-number {
-  position: absolute;
-  text-align: center;
-  color: #333;
-  font-size: 2.5vmin;
-  font-weight: bold;
-  transform: translate(-50%, -50%);
-}
-
 .hand {
   position: absolute;
-  width: 50%;
-  height: 1vmin;
-  background-color: #333;
   top: 50%;
-  transform-origin: 100%;
+  left: 50%;
+  transform-origin: 0% 50%;
   transform: rotate(90deg);
   transition: all 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
 }
@@ -57,16 +38,7 @@ body {
   /* Length of the hour hand */
   height: 1.6vmin;
   /* Thickness of the hour hand */
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  /* Center the hand vertically */
-  left: 50%;
-  /* Center the hand horizontally */
-  transform-origin: 0% 50%;
-  /* Start from the center of the clock */
-  transform: rotate(90deg);
-  /* Initial rotation */
+  background-color: #000;
 }
 
 .min-hand {
@@ -74,16 +46,7 @@ body {
   /* Length of the minute hand */
   height: 1.2vmin;
   /* Thickness of the minute hand */
-  background-color: gray;
-  position: absolute;
-  top: 50%;
-  /* Center the hand vertically */
-  left: 50%;
-  /* Center the hand horizontally */
-  transform-origin: 0% 50%;
-  /* Start from the center of the clock */
-  transform: rotate(90deg);
-  /* Initial rotation */
+  background-color: #666;
 }
 
 .second-hand {
@@ -91,19 +54,51 @@ body {
   /* Length of the second hand */
   height: 0.8vmin;
   /* Thickness of the second hand */
-  background-color: red;
-  position: absolute;
-  top: 50%;
-  /* Center the hand vertically */
-  left: 50%;
-  /* Center the hand horizontally */
-  transform-origin: 0% 50%;
-  /* Start from the center of the clock */
-  transform: rotate(90deg);
-  /* Initial rotation */
+  background-color: #f60f4d;
 }
 
+.clock-number {
+  position: absolute;
+  color: #333;
+  font-size: 2.5vmin;
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
 
-body {
-  background-color: ghostwhite;
+.clock-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #333;
+  transform-origin: 50% 100%;
+}
+
+.clock-mark.small {
+  width: 1vmin;
+  height: 2vmin;
+  /* Smaller marks for non-hour positions */
+  background-color: #999;
+}
+
+.clock-mark:not(.small) {
+  width: 1vmin;
+  height: 4vmin;
+  /* Larger marks for hour positions */
+  background-color: #333;
+}
+
+.date-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3vmin;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
