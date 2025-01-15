@@ -94,5 +94,5 @@ function updateDate() {
 }
 
 // Initialize and update the date every 1 hour
-updateDate();
+updateDate(); 
 setInterval(updateDate, 3600000);
