@@ -49,6 +49,6 @@ CSS Structure:
 
 ### Websites i used for help
 
-<https://www.w3schools.com/>:
-<https://javascript.info/>:
-<https://www.javascripttutorial.net/>:
+<https://www.w3schools.com/>
+<https://javascript.info/>
+<https://www.javascripttutorial.net/>
